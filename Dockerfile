@@ -1,4 +1,4 @@
-FROM node:16.18.0-alpine3.10 AS builder
+FROM node:16.13.0-alpine AS builder
 COPY . /app
 WORKDIR /app
 RUN npm install && npm run build:prod && rm -rf node_modules/
