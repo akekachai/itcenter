@@ -1,6 +1,6 @@
 FROM node:16.18-alpine AS build
-WORKDIR /itcenter
-COPY . /itcenter
+WORKDIR /angularsetting
+COPY package.json package-lock.json ./angularsetting
 run npm install -g @angular/cli
 RUN npm install
 RUN npm run build
