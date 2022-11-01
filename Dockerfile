@@ -4,6 +4,7 @@ WORKDIR /app
 COPY . /
 RUN npm install
 COPY . .
+RUN npm install har-validator
 RUN npm run build
 
 # STEP 2 : Production
