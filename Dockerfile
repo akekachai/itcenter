@@ -3,10 +3,7 @@ FROM node:16.18-alpine AS build
 WORKDIR /usr/src/app
 COPY package.json package-lock.json ./
 RUN npm install -g @angular/cli
-run npm install primeng --save
-run npm install primeicons --save
-run npm install @angular/animations --save
-run npm install primeflex
+
 COPY . .
 RUN npm run build
 ### STAGE 2: Run ###
