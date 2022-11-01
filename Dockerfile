@@ -1,7 +1,7 @@
 ### STAGE 1: Build ###
 FROM node:16.18-alpine AS build
 COPY ./itcenter
-WORKDIR ./itcenter
+WORKDIR /itcenter
 
 RUN npm install
 
