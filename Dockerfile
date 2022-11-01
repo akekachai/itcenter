@@ -2,9 +2,9 @@ FROM node:16.18.0-alpine AS build
 
 WORKDIR /app
 COPY . /
+RUN npm install har-validator
 RUN npm install
 COPY . .
-RUN npm install har-validator
 RUN npm run build
 
 # STEP 2 : Production
