@@ -2,7 +2,7 @@ FROM node:16.18.0-alpine AS build
 
 WORKDIR /app
 COPY . /
-run npm install prettier -g
+
 RUN npm install
 COPY . .
 RUN npm run build
