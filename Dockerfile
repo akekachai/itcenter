@@ -3,7 +3,7 @@ COPY . /app
 WORKDIR /app
 RUN npm install && npm run build:prod && rm -rf node_modules/
 
-FROM nginx:alpine
+FROM nginx:1.17.1-alpine
 COPY --from=build /app/default.conf /etc/nginx/conf.d/
 COPY --from=build /app/dist/ /var/www
 EXPOSE 80
