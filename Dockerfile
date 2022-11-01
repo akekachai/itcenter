@@ -1,8 +1,8 @@
 ### STAGE 1: Build ###
 FROM node:16.18-alpine AS build
-WORKDIR /usr/src/app
+WORKDIR ./
 COPY package.json package-lock.json ./
-RUN npm install -g @angular/cli
+RUN npm install
 
 COPY . .
 RUN npm run build
