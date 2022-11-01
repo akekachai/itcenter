@@ -1,6 +1,7 @@
 FROM node:16.18-alpine AS build
 WORKDIR /itcenter
-COPY . /itcenter
+COPY package.json package-lock.json ./itcenter
+run npm install -g @angular/cli
 RUN npm install
 RUN npm run build
 FROM nginx:1.17.1-alpine
